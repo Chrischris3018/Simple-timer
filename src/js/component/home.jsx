@@ -4,8 +4,9 @@ import React, { useState } from "react";
 
 const Home = () => {
 	const [time, setTime] = useState(0);
-	let clock = clock + 1;
-	setInterval(clock, 1000);
+
+	let clock = setInterval(clock, [1000]);
+	console.log(clock);
 	return <div>{time}</div>;
 };
 
