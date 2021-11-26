@@ -7,6 +7,7 @@ import "../../styles/index.scss";
 const Home = () => {
 	let time = 0;
 	setInterval(function() {
+		const hundredThousands = Math.floor(time / 100000);
 		const tensThousands = Math.floor(time / 10000);
 		const thousands = Math.floor(time / 1000);
 		const hundreds = Math.floor(time / 100);
@@ -17,6 +18,7 @@ const Home = () => {
 	return (
 		<>
 			<SecondsCounter
+				hundredThousandsSeconds={hundredThousands}
 				tenThousandSeconds={tensThousands}
 				thousandSeconds={thousands}
 				hundredSeconds={hundreds}

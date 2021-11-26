@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 function SecondsCounter(props) {
 	return (
 		<div className="clock">
+			<div className="hundredThousands">
+				{props.hundredThousandSeconds}
+			</div>
 			<div className="tensThousands">{props.tenThousandSeconds}</div>
 			<div className="thousands">{props.thousandSeconds}</div>
 			<div className="hundreds">{props.hundredSeconds}</div>
@@ -13,6 +16,7 @@ function SecondsCounter(props) {
 	);
 }
 SecondsCounter.propTypes = {
+	hundredThousandSeconds: PropTypes.number,
 	tenThousandSeconds: PropTypes.number,
 	thousandSeconds: PropTypes.number,
 	hundredSeconds: PropTypes.number,
@@ -22,6 +26,7 @@ SecondsCounter.propTypes = {
 
 let time = 0;
 setInterval(function() {
+	const hundredThousands = Math.floor(time / 100000);
 	const tensThousands = Math.floor(time / 10000);
 	const thousands = Math.floor(time / 1000);
 	const hundreds = Math.floor(time / 100);
