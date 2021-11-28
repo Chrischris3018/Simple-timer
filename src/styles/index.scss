@@ -11,3 +11,33 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+div{
+    text-align: center;
+    background: black;
+    margin-top: 50px;
+}
+h1{
+    display: inline-block;
+    font-size: 60px;
+    line-height: 60px;
+    background: rgb(12, 12, 12);
+    color: white;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+    width: 60px;
+}
+i{
+    display: inline-block;
+    font-size: 60px;
+    line-height: 60px;
+    background: rgb(12, 12, 12);
+    color: white;
+    padding: 10px;
+    margin: 7px;
+    border-radius: 5px;
+    margin-top: 0px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+
+}
